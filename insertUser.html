@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Register New User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        input[type="submit"], input[type="reset"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #2980b9;
+            color: white;
+        }
+        input[type="submit"]:hover { background-color: #1a6a9a; }
+        input[type="reset"] {
+            background-color: #95a5a6;
+            color: white;
+        }
+        input[type="reset"]:hover { background-color: #7f8c8d; }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .login-link a { color: #2980b9; text-decoration: none; }
+        .login-link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="processUser.jsp" method="post">
+            <label for="username">Username (max 15 chars):</label>
+            <input type="text" id="username" name="username"
+                   maxlength="15" required placeholder="e.g. johndoe123">
+
+            <label for="password">Password (max 10 chars):</label>
+            <input type="password" id="password" name="password"
+                   maxlength="10" required placeholder="Enter password">
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname"
+                   maxlength="50" required placeholder="e.g. John">
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname"
+                   maxlength="50" required placeholder="e.g. Doe">
+
+            <div class="btn-row">
+                <input type="submit" value="Register">
+                <input type="reset"  value="Clear">
+            </div>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.jsp">Login here</a>
+        </div>
+    </div>
+</body>
+</html>
